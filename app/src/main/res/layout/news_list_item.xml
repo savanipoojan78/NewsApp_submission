@@ -31,7 +31,7 @@
                 tools:text="30km S of" />
 
             <TextView
-                android:id="@+id/detail"
+                android:id="@+id/section_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"

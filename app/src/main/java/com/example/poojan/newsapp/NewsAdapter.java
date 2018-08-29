@@ -26,8 +26,7 @@ public class NewsAdapter extends ArrayAdapter<News>{
         }
         News news=getItem(position);
         TextView title=(TextView)listItemView.findViewById(R.id.title);
-        TextView description=(TextView)listItemView.findViewById(R.id.detail);
-        assert news != null;
+        TextView description=(TextView)listItemView.findViewById(R.id.section_name);
         title.setText(news.getTitle());
         description.setText(news.getdescription());
         return listItemView;
