@@ -1,15 +1,15 @@
 package com.example.poojan.newsapp;
 
-import android.support.annotation.Nullable;
+
 import android.support.v4.content.AsyncTaskLoader;
-import android.support.v4.content.Loader;
+import android.content.Context;
 
 import java.util.List;
 
-class NewsLoader extends AsyncTaskLoader<List<News>> {
+public class NewsLoader extends AsyncTaskLoader<List<News>> {
     private String murl;
-    public NewsLoader(MainActivity mainActivity, String newsUrl) {
-        super(mainActivity);
+    public NewsLoader(Context context, String newsUrl) {
+        super(context);
         murl=newsUrl;
 
     }
@@ -18,7 +18,7 @@ class NewsLoader extends AsyncTaskLoader<List<News>> {
         forceLoad();
     }
 
-    @Nullable
+
     @Override
     public List<News> loadInBackground() {
         if (murl == null) {
